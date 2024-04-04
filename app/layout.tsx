@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Footer, Navbar } from "@/components";
-
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 
 export const metadata = {
@@ -18,6 +19,8 @@ export default function RootLayout({
       <body className="relative">
         <Navbar/>
         {children}
+        <Analytics/>
+        <SpeedInsights/>
         <Footer/>
       </body>
     </html>
